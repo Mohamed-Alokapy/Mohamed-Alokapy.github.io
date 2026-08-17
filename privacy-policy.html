@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>سياسة الخصوصية — ذاكر و حل (Study & Solve)</title>
+    <title>سياسة الخصوصية — ذاكر و حل (Study &amp; Solve)</title>
 
     <meta
         name="description"
-        content="سياسة الخصوصية لتطبيق ذاكر و حل (Study & Solve)"
+        content="سياسة الخصوصية لتطبيق ذاكر و حل (Study &amp; Solve)"
     >
 
     <style>
@@ -237,7 +237,8 @@
             <p>
                 توضح سياسة الخصوصية هذه أنواع البيانات التي نقوم بجمعها،
                 وكيف نستخدمها ونحميها، والحقوق المتاحة للمستخدمين، وكيف يمكن
-                التواصل معنا أو طلب حذف الحساب والبيانات المرتبطة به.
+                التواصل معنا أو طلب حذف الحساب والبيانات التي يمكن حذفها
+                وفقًا لطبيعة البيانات والالتزامات التشغيلية والقانونية.
             </p>
 
             <h2>2. البيانات التي نجمعها</h2>
@@ -295,7 +296,8 @@
                         </td>
                         <td>
                             عرض تقدم المستخدم ونتائج الاختبارات وتوفير
-                            الخدمات التعليمية.
+                            الخدمات التعليمية، بالإضافة إلى تحسين وتحليل
+                            أداء المحتوى والاختبارات.
                         </td>
                     </tr>
 
@@ -342,9 +344,9 @@
             <ul>
                 <li>
                     <strong>Google Firebase</strong>
-                    (Authentication, Firestore, Functions, App Check)
-                    — لتوفير خدمات المصادقة وقاعدة البيانات والوظائف
-                    من جانب الخادم وحماية التطبيق.
+                    (Authentication, Firestore, App Check)
+                    — لتوفير خدمات المصادقة وقاعدة البيانات
+                    وحماية التطبيق.
                 </li>
 
                 <li>
@@ -407,7 +409,10 @@
             <ul>
                 <li>الوصول إلى بياناته.</li>
                 <li>تصحيح بياناته.</li>
-                <li>حذف حسابه وبياناته الشخصية المرتبطة به.</li>
+                <li>
+                    حذف حسابه وبياناته الشخصية التي يمكن حذفها وفقًا
+                    لطبيعة البيانات وآلية الاحتفاظ الموضحة في هذه السياسة.
+                </li>
             </ul>
 
             <p>
@@ -420,7 +425,7 @@
 
             <p>
                 يمكن للمستخدم في أي وقت طلب
-                <strong>حذف حسابه والبيانات الشخصية المرتبطة به</strong>.
+                <strong>حذف حسابه وبياناته الشخصية التي يمكن حذفها</strong>.
             </p>
 
             <p>
@@ -476,7 +481,19 @@
 
             <p>
                 بعد استلام الطلب، نقوم بمراجعة الطلب والتحقق من ملكية
-                الحساب، ثم نبدأ عملية حذف الحساب والبيانات المرتبطة به.
+                الحساب، ثم نبدأ عملية حذف الحساب والبيانات القابلة للحذف.
+            </p>
+
+            <p>
+                تشمل عملية الحذف بيانات الحساب الأساسية المخزنة في
+                Firestore، بالإضافة إلى حساب المستخدم في Firebase
+                Authentication بعد استكمال إجراءات التحقق من الطلب.
+            </p>
+
+            <p>
+                يتم تنفيذ حذف حساب Firebase Authentication يدويًا من خلال
+                أدوات إدارة Firebase بعد التحقق من طلب المستخدم. ولا يتم
+                تنفيذ هذا الإجراء تلقائيًا من داخل التطبيق.
             </p>
 
             <p>
@@ -486,35 +503,57 @@
                 </strong>
             </p>
 
+            <div class="notice">
+                <strong>الاحتفاظ ببعض سجلات الاختبارات:</strong>
+                <br>
+                قد يتم الاحتفاظ ببعض سجلات الاختبارات والنتائج لأغراض
+                التحليل وتحسين المحتوى والخدمات التعليمية. قد تتضمن هذه
+                السجلات معرّف المستخدم، وبيانات المحاولة، والدرجة، وبعض
+                إجابات الاختبار.
+            </div>
+
             <p>
-                قد يتم الاحتفاظ ببيانات محدودة بعد حذف الحساب إذا كان
-                الاحتفاظ بها مطلوبًا بموجب القانون، أو كان ضروريًا
-                للامتثال لالتزام قانوني، أو لأغراض أمنية ومكافحة الاحتيال،
-                أو لحل النزاعات والمطالبات القانونية.
+                يتم الاحتفاظ بهذه السجلات بشكل منفصل عن حساب المستخدم بعد
+                حذف الحساب، ولا يتم استخدامها لإعادة تفعيل الحساب المحذوف
+                أو منح المستخدم إمكانية الوصول إلى التطبيق أو المحتوى.
             </p>
 
             <p>
-                في هذه الحالات، يتم الاحتفاظ فقط بالبيانات اللازمة للغرض
-                المحدد ووفقًا للمتطلبات القانونية المعمول بها.
+                قد يتم أيضًا الاحتفاظ ببيانات محدودة أخرى إذا كان الاحتفاظ
+                بها مطلوبًا بموجب القانون، أو كان ضروريًا للامتثال لالتزام
+                قانوني، أو لأغراض أمنية ومكافحة الاحتيال، أو لحل النزاعات
+                والمطالبات القانونية.
+            </p>
+
+            <p>
+                في جميع حالات الاحتفاظ، يتم الاحتفاظ فقط بالبيانات اللازمة
+                للغرض المحدد وبالقدر المناسب لذلك الغرض، وفقًا للمتطلبات
+                القانونية والتشغيلية المعمول بها.
             </p>
 
             <h3>معلومات مهمة</h3>
 
             <p>
-                طلب حذف الحساب والبيانات هو إجراء نهائي، وقد يؤدي إلى فقدان
-                الوصول إلى:
+                بعد اكتمال عملية حذف الحساب، يفقد المستخدم إمكانية الوصول
+                إلى حسابه والخدمات والمحتوى المرتبط به.
             </p>
 
             <ul>
                 <li>الحساب.</li>
-                <li>سجل التقدم والنتائج.</li>
-                <li>محاولات الاختبارات.</li>
+                <li>سجل التقدم والنتائج المتاح من خلال الحساب.</li>
+                <li>إمكانية الوصول إلى محاولات الاختبارات من خلال الحساب.</li>
                 <li>المحتوى أو المزايا المرتبطة بالحساب.</li>
             </ul>
 
             <p>
-                بعد اكتمال عملية الحذف، قد لا يكون من الممكن استعادة
-                هذه البيانات.
+                قد تبقى بعض سجلات الاختبارات والنتائج المحتفظ بها لأغراض
+                التحليل وفقًا لما هو موضح أعلاه، ولكنها لا تمنح المستخدم
+                إمكانية الوصول إلى الحساب أو المحتوى بعد حذفه.
+            </p>
+
+            <p>
+                بعد اكتمال عملية حذف الحساب، قد لا يكون من الممكن استعادة
+                الحساب أو البيانات التي تم حذفها.
             </p>
 
             <h2>8. خصوصية الأطفال</h2>
@@ -642,7 +681,9 @@
                 This Privacy Policy explains what data we collect, how we
                 use and protect it, what rights are available to users, and
                 how users can contact us or request deletion of their
-                account and associated data.
+                account and personal data that can be deleted according
+                to the nature of the data and the retention practices
+                described in this policy.
             </p>
 
             <h2>2. Data We Collect</h2>
@@ -700,8 +741,9 @@
                             Quiz answers, scores, and attempt times
                         </td>
                         <td>
-                            Show learning progress, quiz results, and
-                            provide educational services.
+                            Show learning progress, quiz results, provide
+                            educational services, and analyze and improve
+                            educational content and quizzes.
                         </td>
                     </tr>
 
@@ -749,9 +791,9 @@
             <ul>
                 <li>
                     <strong>Google Firebase</strong>
-                    (Authentication, Firestore, Functions, App Check)
-                    — for authentication, database services, server-side
-                    functionality, and application protection.
+                    (Authentication, Firestore, App Check)
+                    — for authentication, database services, and
+                    application protection.
                 </li>
 
                 <li>
@@ -816,7 +858,9 @@
                 <li>Access to your data.</li>
                 <li>Correction of your data.</li>
                 <li>
-                    Deletion of your account and associated personal data.
+                    Deletion of your account and personal data that can be
+                    deleted according to the nature of the data and the
+                    retention practices described in this policy.
                 </li>
             </ul>
 
@@ -830,8 +874,8 @@
 
             <p>
                 You may request
-                <strong>deletion of your account and associated personal data
-                at any time.</strong>
+                <strong>deletion of your account and personal data that can
+                be deleted</strong> at any time.
             </p>
 
             <p>
@@ -887,8 +931,22 @@
 
             <p>
                 After receiving the request, we will review the request and
-                verify account ownership before starting the account and
-                associated data deletion process.
+                verify account ownership before starting the deletion
+                process for the account and personal data that can be deleted.
+            </p>
+
+            <p>
+                The deletion process includes deletion of the user's primary
+                account information stored in Firestore, as well as manual
+                deletion of the user's Firebase Authentication account after
+                the deletion request has been verified.
+            </p>
+
+            <p>
+                Firebase Authentication account deletion is performed
+                manually through Firebase administration tools after the
+                user's request has been verified. This action is not
+                automatically performed by the application.
             </p>
 
             <p>
@@ -899,36 +957,65 @@
                 </strong>
             </p>
 
+            <div class="notice">
+                <strong>Retention of certain quiz records:</strong>
+                <br>
+                Certain quiz attempt and result records may be retained
+                for analytics, service improvement, and educational content
+                evaluation. These records may contain a user identifier,
+                attempt information, scores, and some quiz answers.
+            </div>
+
             <p>
-                We may retain limited information after account deletion
+                These records are retained separately from the user's active
+                account after account deletion. They are not used to restore
+                the deleted account or to provide the user with access to
+                the application or its content.
+            </p>
+
+            <p>
+                We may also retain limited information after account deletion
                 if retention is required by law, necessary to comply with
                 a legal obligation, necessary for security and fraud
                 prevention, or necessary to resolve disputes or legal claims.
             </p>
 
             <p>
-                In such cases, only the information necessary for the
-                specific purpose will be retained and handled according
-                to applicable legal requirements.
+                In all cases of retention, only the information necessary
+                for the specific purpose will be retained, to the extent
+                appropriate for that purpose and according to applicable
+                legal and operational requirements.
             </p>
 
             <h3>Important Information</h3>
 
             <p>
-                Account and data deletion is a permanent action and may
-                result in the loss of access to:
+                After the account deletion process is completed, the user
+                will lose access to the account and the services and content
+                associated with it.
             </p>
 
             <ul>
                 <li>Your account.</li>
-                <li>Learning progress and results.</li>
-                <li>Quiz attempts.</li>
-                <li>Content or features associated with your account.</li>
+                <li>
+                    Learning progress and results available through
+                    the account.
+                </li>
+                <li>
+                    Access to quiz attempts through the account.
+                </li>
+                <li>Content or features associated with the account.</li>
             </ul>
 
             <p>
-                Once the deletion process has been completed, this information
-                may not be recoverable.
+                Certain retained quiz attempt and result records may remain
+                for the purposes described above, but they do not provide
+                the user with access to the deleted account or its content.
+            </p>
+
+            <p>
+                Once the account deletion process has been completed,
+                the deleted account or deleted data may not be recoverable.
             </p>
 
             <h2>8. Children's Privacy</h2>
