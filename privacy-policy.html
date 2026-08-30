@@ -223,7 +223,7 @@
             <div class="meta">
                 <strong>تاريخ السريان:</strong> 2026-08-01
                 <br>
-                <strong>آخر تحديث:</strong> 2026-08-24
+                <strong>آخر تحديث:</strong> 2026-08-25
             </div>
 
             <h2>1. مقدمة</h2>
@@ -325,7 +325,7 @@
                 <li>❌ الصور أو ملفات المستخدم الشخصية</li>
                 <li>❌ محتوى الميكروفون أو الكاميرا</li>
                 <li>❌ معرّفات الإعلانات</li>
-                <li>❌ بيانات Analytics أو Crashlytics</li>
+                <li>❌ تقارير الأعطال أو بيانات التشخيص</li>
             </ul>
 
             <h2>4. مشاركة البيانات</h2>
@@ -342,9 +342,9 @@
             <ul>
                 <li>
                     <strong>Google Firebase</strong>
-                    (Authentication, Firestore, Functions, App Check)
-                    — لتوفير خدمات المصادقة وقاعدة البيانات والوظائف
-                    من جانب الخادم وحماية التطبيق.
+                    (Authentication, Firestore, App Check)
+                    — لتوفير خدمات المصادقة وقاعدة البيانات وحماية
+                    التطبيق.
                 </li>
 
                 <li>
@@ -395,8 +395,8 @@
                 </li>
 
                 <li>
-                    استخدام Firebase App Check للمساعدة في منع الوصول
-                    غير المصرح به والطلبات الآلية الضارة.
+                    استخدام Firebase App Check للمساعدة في الحد من
+                    الوصول غير المصرح به والطلبات الآلية الضارة.
                 </li>
             </ul>
 
@@ -488,9 +488,16 @@
             <p>
                 تشمل عملية الحذف الحالية حذف بيانات الحساب الأساسية
                 المخزنة في Firestore، بما في ذلك ملف المستخدم والبيانات
-                المرتبطة باسم المستخدم عند وجودها، بالإضافة إلى بيانات
+                المرتبطة باسم المستخدم عند وجودها، بالإضافة إلى سجلات
                 النشاط التعليمي المرتبطة بالحساب، بما في ذلك
-                <strong>سجلات محاولات الاختبارات ونتائج الاختبارات</strong>.
+                <strong>سجلات محاولات الاختبارات (Quiz Attempts)
+                ونتائج الاختبارات (Quiz Results)</strong>.
+            </p>
+
+            <p>
+                يتم حذف سجلات محاولات الاختبارات ونتائج الاختبارات المرتبطة
+                بالمستخدم كجزء من عملية حذف بيانات الحساب، ولا يتم الاحتفاظ
+                بها كبيانات تاريخية مرتبطة بالحساب بعد اكتمال عملية الحذف.
             </p>
 
             <p>
@@ -501,16 +508,13 @@
 
             <div class="notice">
                 <strong>مهم:</strong>
-                عند تنفيذ طلب حذف الحساب، يتم حذف سجلات محاولات الاختبارات
-                ونتائج الاختبارات المرتبطة بالحساب، بما في ذلك إجابات
-                الاختبارات والدرجات وأوقات المحاولات، مع بيانات الحساب
-                المرتبطة بها.
+                عند اكتمال عملية حذف الحساب والبيانات، يتم حذف بيانات
+                الحساب الأساسية وسجلات النشاط التعليمي المرتبطة به،
+                بما في ذلك محاولات الاختبارات ونتائج الاختبارات.
+                قد تبقى فقط البيانات المحدودة التي يتطلب الاحتفاظ بها
+                القانون أو الالتزامات الأمنية أو القانونية المعمول بها،
+                إذا انطبق ذلك.
             </div>
-
-            <p>
-                لذلك، لا يتم الاحتفاظ بسجلات محاولات الاختبارات أو نتائج
-                الاختبارات المرتبطة بالحساب بعد اكتمال عملية الحذف.
-            </p>
 
             <p>
                 <strong>
@@ -540,14 +544,9 @@
             <ul>
                 <li>الحساب.</li>
                 <li>سجل التقدم والنتائج المتاح من خلال الحساب.</li>
+                <li>سجلات محاولات الاختبارات ونتائج الاختبارات المرتبطة بالحساب.</li>
                 <li>المحتوى أو المزايا المرتبطة بالحساب.</li>
             </ul>
-
-            <p>
-                يتم حذف بيانات الحساب والنشاط التعليمي المرتبط به،
-                بما في ذلك سجلات محاولات الاختبارات ونتائج الاختبارات،
-                عند اكتمال عملية الحذف.
-            </p>
 
             <p>
                 بعد اكتمال عملية حذف بيانات الحساب، قد لا يكون من الممكن
@@ -663,7 +662,7 @@
             <div class="meta">
                 <strong>Effective date:</strong> 2026-08-01
                 <br>
-                <strong>Last updated:</strong> 2026-08-24
+                <strong>Last updated:</strong> 2026-08-25
             </div>
 
             <h2>1. Introduction</h2>
@@ -769,7 +768,7 @@
                 <li>❌ Photos or personal files</li>
                 <li>❌ Microphone or camera content</li>
                 <li>❌ Advertising identifiers</li>
-                <li>❌ Analytics or Crashlytics data</li>
+                <li>❌ Crash reports or diagnostic data</li>
             </ul>
 
             <h2>4. Data Sharing</h2>
@@ -786,9 +785,9 @@
             <ul>
                 <li>
                     <strong>Google Firebase</strong>
-                    (Authentication, Firestore, Functions, App Check)
-                    — for authentication, database services, server-side
-                    functionality, and application protection.
+                    (Authentication, Firestore, App Check)
+                    — for authentication, database services, and
+                    application protection.
                 </li>
 
                 <li>
@@ -840,8 +839,8 @@
                 </li>
 
                 <li>
-                    Firebase App Check to help prevent unauthorized access
-                    and malicious automated requests.
+                    Firebase App Check is enabled to help limit
+                    unauthorized access and malicious automated requests.
                 </li>
             </ul>
 
@@ -939,8 +938,15 @@
                 The current deletion process removes the primary account
                 data stored in Firestore, including the user's profile and
                 associated username data when applicable, as well as
-                educational activity data associated with the account,
+                educational activity records associated with the account,
                 including <strong>quiz attempt records and quiz results</strong>.
+            </p>
+
+            <p>
+                Quiz attempt records and quiz results associated with the
+                user are deleted as part of the account data deletion
+                process and are not retained as historical records linked
+                to the account after the deletion process is completed.
             </p>
 
             <p>
@@ -952,17 +958,12 @@
 
             <div class="notice">
                 <strong>Important:</strong>
-                When an account deletion request is processed, quiz attempt
-                records and quiz results associated with the account are
-                deleted, including quiz answers, scores, and attempt
-                timestamps, together with the associated account data.
+                Once the account and data deletion process is completed,
+                the primary account data and associated educational activity
+                records, including quiz attempts and quiz results, are deleted.
+                Limited information may remain only where retention is
+                required by applicable legal or security obligations.
             </div>
-
-            <p>
-                Therefore, quiz attempt records and quiz results associated
-                with the account are not retained after the deletion process
-                is completed.
-            </p>
 
             <p>
                 <strong>
@@ -974,8 +975,8 @@
 
             <p>
                 Limited information may be retained after account deletion
-                when retention is required by law, necessary to comply
-                with a legal obligation, necessary for security and fraud
+                when retention is required by law, necessary to comply with
+                a legal obligation, necessary for security and fraud
                 prevention, or necessary to resolve disputes or legal claims.
             </p>
 
@@ -994,14 +995,9 @@
             <ul>
                 <li>Your account.</li>
                 <li>Learning progress and results available through the account.</li>
+                <li>Quiz attempt records and quiz results associated with the account.</li>
                 <li>Content or features associated with your account.</li>
             </ul>
-
-            <p>
-                Account data and associated educational activity data,
-                including quiz attempt records and quiz results, are
-                deleted when the deletion process is completed.
-            </p>
 
             <p>
                 Once the account data deletion process has been completed,
@@ -1116,7 +1112,7 @@
             </p>
 
             <p>
-                Last updated: 2026-08-24
+                Last updated: 2026-08-25
             </p>
         </div>
 
