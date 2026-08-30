@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -224,7 +223,7 @@
             <div class="meta">
                 <strong>تاريخ السريان:</strong> 2026-08-01
                 <br>
-                <strong>آخر تحديث:</strong> 2026-08-17
+                <strong>آخر تحديث:</strong> 2026-08-24
             </div>
 
             <h2>1. مقدمة</h2>
@@ -489,8 +488,9 @@
             <p>
                 تشمل عملية الحذف الحالية حذف بيانات الحساب الأساسية
                 المخزنة في Firestore، بما في ذلك ملف المستخدم والبيانات
-                المرتبطة باسم المستخدم عند وجودها، بالإضافة إلى أي سجلات
-                إدارية مرتبطة بالحساب عند انطباق ذلك.
+                المرتبطة باسم المستخدم عند وجودها، بالإضافة إلى بيانات
+                النشاط التعليمي المرتبطة بالحساب، بما في ذلك
+                <strong>سجلات محاولات الاختبارات ونتائج الاختبارات</strong>.
             </p>
 
             <p>
@@ -501,19 +501,15 @@
 
             <div class="notice">
                 <strong>مهم:</strong>
-                بعض سجلات النشاط التعليمي، بما في ذلك سجلات محاولات
-                الاختبارات ونتائج الاختبارات، قد يتم الاحتفاظ بها بعد
-                حذف بيانات الحساب الأساسية. قد تتضمن هذه السجلات معرّف
-                المستخدم المرتبط بالمحاولة وإجابات الاختبارات والدرجات
-                وأوقات المحاولات، ويتم الاحتفاظ بها لأغراض السجلات
-                التعليمية والتحليلات التشغيلية.
+                عند تنفيذ طلب حذف الحساب، يتم حذف سجلات محاولات الاختبارات
+                ونتائج الاختبارات المرتبطة بالحساب، بما في ذلك إجابات
+                الاختبارات والدرجات وأوقات المحاولات، مع بيانات الحساب
+                المرتبطة بها.
             </div>
 
             <p>
-                لا يعني حذف الحساب حذف جميع السجلات التاريخية المرتبطة
-                بالاختبارات بشكل فوري أو تلقائي. يتم التعامل مع البيانات
-                المحتفظ بها وفقًا للغرض الذي يتم الاحتفاظ بها من أجله
-                والمتطلبات القانونية والأمنية المعمول بها.
+                لذلك، لا يتم الاحتفاظ بسجلات محاولات الاختبارات أو نتائج
+                الاختبارات المرتبطة بالحساب بعد اكتمال عملية الحذف.
             </p>
 
             <p>
@@ -527,8 +523,7 @@
                 قد يتم الاحتفاظ ببيانات محدودة بعد حذف الحساب إذا كان
                 الاحتفاظ بها مطلوبًا بموجب القانون، أو كان ضروريًا
                 للامتثال لالتزام قانوني، أو لأغراض أمنية ومكافحة الاحتيال،
-                أو لحفظ السجلات التعليمية والتحليلات التشغيلية، أو لحل
-                النزاعات والمطالبات القانونية.
+                أو لحل النزاعات والمطالبات القانونية.
             </p>
 
             <p>
@@ -549,9 +544,9 @@
             </ul>
 
             <p>
-                قد تبقى بعض السجلات التعليمية التاريخية في أنظمة الخدمة
-                وفقًا لما هو موضح أعلاه، حتى بعد حذف الحساب وبيانات الحساب
-                الأساسية.
+                يتم حذف بيانات الحساب والنشاط التعليمي المرتبط به،
+                بما في ذلك سجلات محاولات الاختبارات ونتائج الاختبارات،
+                عند اكتمال عملية الحذف.
             </p>
 
             <p>
@@ -668,7 +663,7 @@
             <div class="meta">
                 <strong>Effective date:</strong> 2026-08-01
                 <br>
-                <strong>Last updated:</strong> 2026-08-17
+                <strong>Last updated:</strong> 2026-08-24
             </div>
 
             <h2>1. Introduction</h2>
@@ -944,8 +939,8 @@
                 The current deletion process removes the primary account
                 data stored in Firestore, including the user's profile and
                 associated username data when applicable, as well as
-                administrative records associated with the account when
-                applicable.
+                educational activity data associated with the account,
+                including <strong>quiz attempt records and quiz results</strong>.
             </p>
 
             <p>
@@ -957,20 +952,16 @@
 
             <div class="notice">
                 <strong>Important:</strong>
-                Certain educational activity records, including quiz attempt
-                records and quiz results, may be retained after the primary
-                account data is deleted. These records may include the
-                user identifier associated with the attempt, quiz answers,
-                scores, and attempt timestamps. They are retained for
-                educational records and operational analytics purposes.
+                When an account deletion request is processed, quiz attempt
+                records and quiz results associated with the account are
+                deleted, including quiz answers, scores, and attempt
+                timestamps, together with the associated account data.
             </div>
 
             <p>
-                Account deletion therefore does not mean that all historical
-                quiz-related records are immediately or automatically
-                deleted. Retained information is handled according to the
-                purpose for which it is retained and applicable legal and
-                security requirements.
+                Therefore, quiz attempt records and quiz results associated
+                with the account are not retained after the deletion process
+                is completed.
             </p>
 
             <p>
@@ -983,11 +974,9 @@
 
             <p>
                 Limited information may be retained after account deletion
-                when retention is required by law, necessary to comply with
-                a legal obligation, necessary for security and fraud
-                prevention, necessary for maintaining educational records
-                and operational analytics, or necessary to resolve disputes
-                or legal claims.
+                when retention is required by law, necessary to comply
+                with a legal obligation, necessary for security and fraud
+                prevention, or necessary to resolve disputes or legal claims.
             </p>
 
             <p>
@@ -1009,9 +998,9 @@
             </ul>
 
             <p>
-                Some historical educational records may remain in the
-                service systems as described above, even after the account
-                and primary account data have been deleted.
+                Account data and associated educational activity data,
+                including quiz attempt records and quiz results, are
+                deleted when the deletion process is completed.
             </p>
 
             <p>
@@ -1127,7 +1116,7 @@
             </p>
 
             <p>
-                Last updated: 2026-08-17
+                Last updated: 2026-08-24
             </p>
         </div>
 
@@ -1136,4 +1125,3 @@
 
 </body>
 </html>
-```
